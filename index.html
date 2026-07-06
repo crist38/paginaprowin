@@ -174,28 +174,31 @@
             <span class="section__subtitle">Ponte en contacto para tu próximo proyecto</span>
 
             <div class="contact__container container grid">
-                <div class="contact__content">
-                    <div class="contact__info">
-                        <div class="contact__card">
-                            <i class='bx bx-envelope contact__card-icon'></i>
-                            <h3 class="contact__card-title">Email</h3>
-                            <span class="contact__card-data">prowindowslimitada@gmail.com</span>
-                        </div>
-                        <div class="contact__card">
-                            <i class='bx bx-phone contact__card-icon'></i>
-                            <h3 class="contact__card-title">Teléfono</h3>
-                            <span class="contact__card-data">+56 9 1234 5678</span>
-                        </div>
-                        <div class="contact__card">
-                            <i class='bx bx-map contact__card-icon'></i>
-                            <h3 class="contact__card-title">Ubicación</h3>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Geronimo+Mendez+2115,+Coquimbo" target="_blank" class="contact__card-data" style="color: var(--text-color); transition: color 0.3s;">
-                                Avenida Geronimo Mendez 2115, Galpón 17, Barrio Industrial, Coquimbo
-                            </a>
-                        </div>
+                <!-- Info Horizontal Cards -->
+                <div class="contact__info" style="grid-column: 1 / -1; display: grid; gap: 1.5rem;">
+                    <div class="contact__card">
+                        <i class='bx bx-envelope contact__card-icon'></i>
+                        <h3 class="contact__card-title">Email</h3>
+                        <span class="contact__card-data">prowindowslimitada@gmail.com</span>
                     </div>
-                    <div style="margin-top: 2rem; border-radius: 1rem; overflow: hidden; border: 1px solid var(--glass-border);">
-                        <iframe src="https://maps.google.com/maps?q=Avenida%20Geronimo%20Mendez%202115,%20Coquimbo&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="contact__card">
+                        <i class='bx bx-phone contact__card-icon'></i>
+                        <h3 class="contact__card-title">Teléfono</h3>
+                        <span class="contact__card-data">+56 9 1234 5678</span>
+                    </div>
+                    <div class="contact__card">
+                        <i class='bx bx-map contact__card-icon'></i>
+                        <h3 class="contact__card-title">Ubicación</h3>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Geronimo+Mendez+2115,+Coquimbo" target="_blank" class="contact__card-data" style="color: var(--text-color); transition: color 0.3s;">
+                            Avenida Geronimo Mendez 2115, Galpón 17, Barrio Industrial, Coquimbo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="contact__content">
+                    <div style="height: 100%; border-radius: 1rem; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <iframe src="https://maps.google.com/maps?q=Avenida%20Geronimo%20Mendez%202115,%20Coquimbo&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; min-height: 350px;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
 
