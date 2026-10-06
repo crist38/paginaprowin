@@ -111,38 +111,20 @@
             <h2 class="section__title">Nuestras Obras</h2>
             <span class="section__subtitle">Proyectos destacados y entregados</span>
 
-            <div class="works__container container grid">
-                <div class="works__card">
-                    <img src="./IMG_7327.JPG" alt="Obra de Termopanel" class="works__img">
-                    <div class="works__data">
-                        <h3 class="works__title">Instalación Residencial</h3>
-                        <span class="works__subtitle">Termopanel (DVH)</span>
-                    </div>
-                </div>
+            <div class="works__filters container" id="works-filters">
+                <button class="works__filter active-filter" data-filter="all">Todas</button>
+                <button class="works__filter" data-filter="residencial">Residencial</button>
+                <button class="works__filter" data-filter="institucional">Comercial e Institucional</button>
+                <button class="works__filter" data-filter="conjuntos">Conjuntos Habitacionales</button>
+                <button class="works__filter" data-filter="especiales">Solar Room y Cierres</button>
+                <button class="works__filter" data-filter="detalles">Puertas y Detalles</button>
+            </div>
 
-                <div class="works__card">
-                    <img src="./pergola.JPG" alt="Solar Room" class="works__img">
-                    <div class="works__data">
-                        <h3 class="works__title">Solar Room</h3>
-                        <span class="works__subtitle">Estructuras de Aluminio</span>
-                    </div>
-                </div>
+            <!-- Las tarjetas se generan en script.js a partir de obras-data.js -->
+            <div class="works__container container grid" id="works-container"></div>
 
-                <div class="works__card">
-                    <img src="./IMG-20180110-WA0003.jpg" alt="Ventana Instalada" class="works__img">
-                    <div class="works__data">
-                        <h3 class="works__title">Detalle de Obra</h3>
-                        <span class="works__subtitle">Ventanas a Medida</span>
-                    </div>
-                </div>
-                
-                <div class="works__card">
-                    <img src="./IMG_8010.JPG" alt="Vista Panorámica" class="works__img">
-                    <div class="works__data">
-                        <h3 class="works__title">Vistas Panorámicas</h3>
-                        <span class="works__subtitle">Acabados de Alta Calidad</span>
-                    </div>
-                </div>
+            <div class="works__more">
+                <button class="button button--ghost" id="works-more">Ver más obras</button>
             </div>
         </section>
 
@@ -184,13 +166,13 @@
                     <div class="contact__card">
                         <i class='bx bx-phone contact__card-icon'></i>
                         <h3 class="contact__card-title">Teléfono</h3>
-                        <span class="contact__card-data">+56 9 1234 5678</span>
+                        <span class="contact__card-data">+56 9 6845 0823</span>
                     </div>
                     <div class="contact__card">
                         <i class='bx bx-map contact__card-icon'></i>
                         <h3 class="contact__card-title">Ubicación</h3>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Geronimo+Mendez+2115,+Coquimbo" target="_blank" class="contact__card-data" style="color: var(--text-color); transition: color 0.3s;">
-                            Avenida Geronimo Mendez 2115, Galpón 17, Barrio Industrial, Coquimbo
+                        <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Geronimo+Mendez+1551,+Coquimbo" target="_blank" class="contact__card-data" style="color: var(--text-color); transition: color 0.3s;">
+                            Avenida Gerónimo Méndez 1551, Coquimbo
                         </a>
                     </div>
                 </div>
@@ -198,7 +180,7 @@
                 <!-- Map -->
                 <div class="contact__content">
                     <div style="height: 100%; border-radius: 1rem; overflow: hidden; border: 1px solid var(--glass-border);">
-                        <iframe src="https://maps.google.com/maps?q=Avenida%20Geronimo%20Mendez%202115,%20Coquimbo&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; min-height: 350px;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://maps.google.com/maps?q=Avenida%20Geronimo%20Mendez%201551,%20Coquimbo&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; min-height: 350px;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
 
@@ -242,7 +224,19 @@
         <span class="footer__copy">&#169; Prowindows Limitada. Todos los derechos reservados.</span>
     </footer>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar"><i class='bx bx-x'></i></button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Anterior"><i class='bx bx-chevron-left'></i></button>
+        <figure class="lightbox__figure">
+            <img src="" alt="" class="lightbox__img" id="lightbox-img">
+            <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Siguiente"><i class='bx bx-chevron-right'></i></button>
+    </div>
+
     <!-- JS -->
+    <script src="obras-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

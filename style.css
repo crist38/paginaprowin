@@ -176,7 +176,7 @@ img {
 @media screen and (max-width: 1023px) {
   .nav__menu {
     position: fixed;
-    top: -100%;
+    top: -100vh; /* vh: con el header difuminado, % se calcula sobre el header y el menú quedaba a la vista */
     left: 0;
     width: 100%;
     background-color: var(--glass-color);
@@ -360,11 +360,50 @@ img {
   gap: 2rem;
 }
 
+.works__filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.works__filter {
+  background: var(--container-color);
+  color: var(--text-color);
+  border: 1px solid var(--glass-border);
+  padding: 0.6rem 1.25rem;
+  border-radius: 2rem;
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.works__filter:hover {
+  color: var(--title-color);
+  border-color: var(--first-color);
+}
+
+.works__filter.active-filter {
+  background-color: var(--first-color);
+  border-color: var(--first-color);
+  color: #fff;
+}
+
 .works__card {
   position: relative;
   border-radius: 1.5rem;
   overflow: hidden;
-  group: hover;
+  cursor: pointer;
+  background: var(--container-color);
+}
+
+.works__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
 }
 
 .works__img {
@@ -410,6 +449,91 @@ img {
 .works__card:hover .works__subtitle {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* Sin hover (táctil): mostrar siempre el título */
+@media (hover: none) {
+  .works__title,
+  .works__subtitle {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =============== LIGHTBOX =============== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(2, 6, 23, 0.94);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.lightbox.show-lightbox {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__figure {
+  max-width: 92vw;
+  text-align: center;
+}
+
+.lightbox__img {
+  max-width: 92vw;
+  max-height: 80vh;
+  margin-inline: auto;
+  border-radius: 0.75rem;
+}
+
+.lightbox__caption {
+  margin-top: 1rem;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  background: var(--glass-color);
+  color: var(--title-color);
+  font-size: 1.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover {
+  background-color: var(--first-color);
+}
+
+.lightbox__close {
+  top: 1rem;
+  right: 1rem;
+}
+
+.lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__nav--prev {
+  left: 1rem;
+}
+
+.lightbox__nav--next {
+  right: 1rem;
 }
 
 /* =============== ABOUT =============== */
