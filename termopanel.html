@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termopanel (DVH) a medida | Prowindows Limitada</title>
+    <meta name="description" content="Termopaneles o doble vidriado hermético (DVH) en la Región de Coquimbo. Cómo funcionan, aislación térmica y acústica, control solar, vidrios de seguridad, normativa y cómo elegir el adecuado.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="./logo.png" alt="Prowindows Limitada Logo" class="logo-img">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html#home" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="index.html#products" class="nav__link active-link">Productos</a></li>
+                    <li class="nav__item"><a href="index.html#works" class="nav__link">Nuestras Obras</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link nav__cta">Cotizar</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero -->
+        <section class="pvc-hero section">
+            <div class="pvc-hero__container container">
+                <nav class="pvc-breadcrumb" aria-label="Ruta">
+                    <a href="index.html">Inicio</a> <i class='bx bx-chevron-right'></i>
+                    <a href="index.html#products">Productos</a> <i class='bx bx-chevron-right'></i>
+                    <span>Termopanel</span>
+                </nav>
+                <h1 class="pvc-hero__title">Termopanel (DVH)</h1>
+                <p class="pvc-hero__description">
+                    Un termopanel bien elegido puede aislar del frío, controlar el calor del sol, bajar el ruido
+                    y proteger ante golpes, todo en la misma ventana. Te ayudamos a escoger la combinación
+                    de vidrios adecuada para tu proyecto, en aluminio o PVC.
+                </p>
+                <div class="hero__buttons">
+                    <a href="index.html#contact" class="button">Cotiza tu termopanel</a>
+                    <a href="#dvh-elegir" class="button button--ghost">¿Cuál me conviene?</a>
+                </div>
+                <ul class="pvc-hero__highlights">
+                    <li><i class='bx bx-sun'></i> Aislación térmica</li>
+                    <li><i class='bx bx-volume-mute'></i> Aislación acústica</li>
+                    <li><i class='bx bx-droplet'></i> Menos condensación</li>
+                    <li><i class='bx bx-shield-quarter'></i> Seguridad</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Qué es -->
+        <section class="section">
+            <h2 class="section__title">¿Qué es un termopanel?</h2>
+            <span class="section__subtitle">Su nombre técnico es DVH: doble vidriado hermético</span>
+
+            <div class="container pvc-split">
+                <div class="pvc-split__text">
+                    <p>
+                        Un termopanel son <b>dos vidrios separados por una cámara de aire sellada</b>.
+                        Esa cámara seca y hermética es la que frena el paso del calor y del sonido.
+                        Cuando lleva tres vidrios y dos cámaras se llama <b>TVH</b> (triple vidriado hermético).
+                    </p>
+                    <p>
+                        La combinación de vidrios, sus espesores, las láminas especiales y el ancho de la cámara
+                        se definen según el tamaño de la ventana, el viento al que estará expuesta y lo que
+                        se busca lograr: abrigo, control solar, silencio o seguridad.
+                    </p>
+                    <img src="./obras/thumbs/casa-residencial-04.jpg" alt="Ventanal corredero con termopanel instalado por Prowindows" class="dvh-photo" loading="lazy">
+                </div>
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-layer'></i> Sus partes</h3>
+                    <figure class="dvh-diagram">
+                        <svg viewBox="0 0 400 440" role="img" aria-labelledby="dvh-diagram-title">
+                            <title id="dvh-diagram-title">Corte de un termopanel: dos vidrios, separador de aluminio con desecante, butilo y sello de polisulfuro</title>
+                            <defs>
+                                <linearGradient id="dvh-glass-grad" x1="0" x2="1">
+                                    <stop offset="0" stop-color="#1f6b52"/>
+                                    <stop offset="0.25" stop-color="#7fcdb0"/>
+                                    <stop offset="0.5" stop-color="#b9ecd8"/>
+                                    <stop offset="0.75" stop-color="#6cbf9f"/>
+                                    <stop offset="1" stop-color="#1f6b52"/>
+                                </linearGradient>
+                                <linearGradient id="dvh-metal-grad" x1="0" x2="1">
+                                    <stop offset="0" stop-color="#8b939e"/>
+                                    <stop offset="0.3" stop-color="#e8ebef"/>
+                                    <stop offset="0.7" stop-color="#c3c8cf"/>
+                                    <stop offset="1" stop-color="#7d8590"/>
+                                </linearGradient>
+                                <linearGradient id="dvh-poly-grad" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0" stop-color="#3a3f47"/>
+                                    <stop offset="1" stop-color="#15181d"/>
+                                </linearGradient>
+                                <linearGradient id="dvh-cavity-grad" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0" stop-color="#0b1120" stop-opacity="0.2"/>
+                                    <stop offset="1" stop-color="#0b1120" stop-opacity="0.75"/>
+                                </linearGradient>
+                                <radialGradient id="dvh-bead-grad" cx="0.35" cy="0.35" r="0.7">
+                                    <stop offset="0" stop-color="#fffaf0"/>
+                                    <stop offset="0.6" stop-color="#e3d3ae"/>
+                                    <stop offset="1" stop-color="#a8956c"/>
+                                </radialGradient>
+                                <pattern id="dvh-beads" width="16" height="14" patternUnits="userSpaceOnUse">
+                                    <rect width="16" height="14" fill="#6b5a3a"/>
+                                    <circle cx="4" cy="4" r="3.8" fill="url(#dvh-bead-grad)"/>
+                                    <circle cx="12" cy="4" r="3.8" fill="url(#dvh-bead-grad)"/>
+                                    <circle cx="0" cy="11" r="3.8" fill="url(#dvh-bead-grad)"/>
+                                    <circle cx="8" cy="11" r="3.8" fill="url(#dvh-bead-grad)"/>
+                                    <circle cx="16" cy="11" r="3.8" fill="url(#dvh-bead-grad)"/>
+                                </pattern>
+                            </defs>
+
+                            <!-- Cámara de aire -->
+                            <rect x="150" y="30" width="100" height="232" fill="url(#dvh-cavity-grad)"/>
+
+                            <!-- Sello secundario (polisulfuro) -->
+                            <rect x="150" y="332" width="100" height="58" fill="url(#dvh-poly-grad)"/>
+                            <path d="M156 340 Q200 334 244 340" class="dvh-sheen"/>
+
+                            <!-- Separador de aluminio con desecante -->
+                            <rect x="157" y="262" width="86" height="70" rx="3" fill="url(#dvh-metal-grad)"/>
+                            <rect x="164" y="272" width="72" height="54" rx="2" fill="url(#dvh-beads)"/>
+                            <g fill="#4b5563">
+                                <rect x="170" y="264" width="8" height="3" rx="1.5"/>
+                                <rect x="186" y="264" width="8" height="3" rx="1.5"/>
+                                <rect x="202" y="264" width="8" height="3" rx="1.5"/>
+                                <rect x="218" y="264" width="8" height="3" rx="1.5"/>
+                            </g>
+
+                            <!-- Butilo (sello primario) -->
+                            <rect x="150" y="262" width="7" height="58" fill="#0a0c0f"/>
+                            <rect x="243" y="262" width="7" height="58" fill="#0a0c0f"/>
+
+                            <!-- Vidrios -->
+                            <rect x="110" y="20" width="40" height="370" fill="url(#dvh-glass-grad)" opacity="0.92"/>
+                            <rect x="250" y="20" width="40" height="370" fill="url(#dvh-glass-grad)" opacity="0.92"/>
+                            <polygon points="110,20 150,20 156,12 116,12" fill="#c9f2e2" opacity="0.85"/>
+                            <polygon points="250,20 290,20 296,12 256,12" fill="#c9f2e2" opacity="0.85"/>
+                            <line x1="118" y1="26" x2="118" y2="384" class="dvh-shine"/>
+                            <line x1="258" y1="26" x2="258" y2="384" class="dvh-shine"/>
+
+                            <!-- Números -->
+                            <g class="dvh-leads">
+                                <polyline points="187,62 140,62 134,92"/>
+                                <polyline points="213,62 260,62 266,92"/>
+                                <line x1="200" y1="218" x2="200" y2="262"/>
+                                <line x1="93" y1="300" x2="180" y2="300"/>
+                                <line x1="304" y1="290" x2="247" y2="290"/>
+                                <line x1="304" y1="362" x2="215" y2="362"/>
+                            </g>
+                            <g class="dvh-dots">
+                                <circle cx="134" cy="92" r="3"/>
+                                <circle cx="266" cy="92" r="3"/>
+                                <circle cx="200" cy="262" r="3"/>
+                                <circle cx="180" cy="300" r="3"/>
+                                <circle cx="247" cy="290" r="3"/>
+                                <circle cx="215" cy="362" r="3"/>
+                            </g>
+                            <g class="dvh-badge"><circle cx="200" cy="62" r="13"/><text x="200" y="67">1</text></g>
+                            <g class="dvh-badge"><circle cx="200" cy="150" r="13"/><text x="200" y="155">2</text></g>
+                            <g class="dvh-badge"><circle cx="200" cy="205" r="13"/><text x="200" y="210">3</text></g>
+                            <g class="dvh-badge"><circle cx="80" cy="300" r="13"/><text x="80" y="305">4</text></g>
+                            <g class="dvh-badge"><circle cx="317" cy="290" r="13"/><text x="317" y="295">5</text></g>
+                            <g class="dvh-badge"><circle cx="317" cy="362" r="13"/><text x="317" y="367">6</text></g>
+
+                            <!-- Medidas -->
+                            <g class="dvh-dim">
+                                <line x1="110" y1="402" x2="110" y2="414"/><line x1="150" y1="402" x2="150" y2="414"/>
+                                <line x1="250" y1="402" x2="250" y2="414"/><line x1="290" y1="402" x2="290" y2="414"/>
+                                <line x1="110" y1="408" x2="290" y2="408"/>
+                            </g>
+                            <text class="dvh-dimtext" x="130" y="428" text-anchor="middle">6</text>
+                            <text class="dvh-dimtext" x="200" y="428" text-anchor="middle">12 mm</text>
+                            <text class="dvh-dimtext" x="270" y="428" text-anchor="middle">6</text>
+                        </svg>
+                    </figure>
+                    <ol class="dvh-parts">
+                        <li><span class="dvh-num">1</span> <span><b>Vidrios:</b> dos (o tres) vidrios, que pueden ser de distinto espesor y tipo.</span></li>
+                        <li><span class="dvh-num">2</span> <span><b>Cámara de aire:</b> espacio seco y hermético entre los vidrios, que frena el paso del calor.</span></li>
+                        <li><span class="dvh-num">3</span> <span><b>Separador:</b> perfil de aluminio (o <em>warm edge</em>, que aísla mejor los bordes) que mantiene la distancia entre los vidrios.</span></li>
+                        <li><span class="dvh-num">4</span> <span><b>Desecante:</b> sales higroscópicas dentro del separador que absorben la humedad de la cámara y evitan que se empañe por dentro.</span></li>
+                        <li><span class="dvh-num">5</span> <span><b>Butilo:</b> sello primario entre el separador y los vidrios, que frena el paso del vapor de agua.</span></li>
+                        <li><span class="dvh-num">6</span> <span><b>Polisulfuro:</b> sello secundario en todo el contorno, que da firmeza a la unidad y la mantiene hermética.</span></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Funciones -->
+        <section class="section pvc-alt">
+            <h2 class="section__title">Lo que puede hacer un termopanel</h2>
+            <span class="section__subtitle">Cada función depende de los vidrios que elijas</span>
+
+            <div class="pvc-grid container">
+                <article class="pvc-card">
+                    <i class='bx bx-sun pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Aislación térmica</h3>
+                    <p>La casa pierde menos calor en invierno, gasta menos en calefacción y los vidrios se empañan mucho menos.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-cloud-light-rain pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Control solar</h3>
+                    <p>Con un vidrio de control solar entra menos calor del sol en verano, sin oscurecer el ambiente ni usar vidrios espejados.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-volume-mute pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Aislación acústica</h3>
+                    <p>Combinando espesores distintos o un vidrio laminado acústico, baja notablemente el ruido del tránsito y la calle.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-shield-quarter pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Seguridad</h3>
+                    <p>Con vidrio templado o laminado se reduce el riesgo de cortes si alguien choca con la ventana o si el vidrio se quiebra.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Térmico -->
+        <section class="section">
+            <h2 class="section__title">Aislación térmica</h2>
+            <span class="section__subtitle">Se mide con el valor U: mientras más bajo, mejor aísla</span>
+
+            <div class="container terrace-table__wrap">
+                <table class="terrace-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tipo de vidrio</th>
+                            <th scope="col">Composición (mm)</th>
+                            <th scope="col">Valor U (W/m²K)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Vidrio simple incoloro</th>
+                            <td>6</td>
+                            <td>5,8</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Termopanel incoloro</th>
+                            <td>6 / 12 / 6</td>
+                            <td>2,8</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Termopanel Low-E pirolítico</th>
+                            <td>6 / 12 / 6</td>
+                            <td>1,8</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Termopanel Low-E capa blanda</th>
+                            <td>6 / 12 / 6</td>
+                            <td>1,6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container pvc-two terrace-mt">
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-trending-down'></i> Menos de la mitad de pérdida</h3>
+                    <p>
+                        Un termopanel común deja pasar <b>menos de la mitad del calor</b> que un vidrio simple.
+                        La composición <b>6/12/6</b> significa vidrio de 6 mm, cámara de 12 mm y otro vidrio de 6 mm.
+                    </p>
+                </div>
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-bolt-circle'></i> Vidrio Low-E</h3>
+                    <p>
+                        Tiene una capa invisible de <b>baja emisividad</b> que devuelve el calor de la calefacción hacia
+                        dentro, pero deja entrar el sol. Un termopanel Low-E conserva cerca del <b>66% de la energía</b>
+                        que se perdería con un vidrio simple.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Control solar -->
+        <section class="section pvc-alt">
+            <h2 class="section__title">Control solar</h2>
+            <span class="section__subtitle">Para ventanas que reciben sol directo muchas horas</span>
+
+            <div class="container pvc-split">
+                <div class="pvc-split__text">
+                    <p>
+                        Un termopanel con <b>control solar</b> incorpora un vidrio especial que refleja parte de la
+                        radiación del sol. Así reduce el calor que entra en verano y, al mismo tiempo, aísla en invierno,
+                        manteniendo una buena entrada de luz y sin el efecto espejo de los vidrios reflectivos.
+                    </p>
+                    <p>
+                        Su eficiencia se mide con el <b>coeficiente de sombra</b>: mientras más bajo, más calor bloquea.
+                        Un vidrio común está cerca de 0,94; un termopanel común, cerca de 0,82; y un termopanel con
+                        control solar puede bajar a valores entre 0,36 y 0,63.
+                    </p>
+                </div>
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-compass'></i> ¿Dónde conviene?</h3>
+                    <ul class="pvc-checklist">
+                        <li><i class='bx bx-check'></i> Ventanas orientadas al norte y al poniente</li>
+                        <li><i class='bx bx-check'></i> Ventanales grandes que se calientan en la tarde</li>
+                        <li><i class='bx bx-check'></i> Zonas calurosas, como el valle de Elqui o Limarí</li>
+                        <li><i class='bx bx-check'></i> Oficinas y fachadas vidriadas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acústica -->
+        <section class="section">
+            <h2 class="section__title">Aislación acústica</h2>
+            <span class="section__subtitle">Mientras más decibeles (dB) atenúa, menos ruido entra</span>
+
+            <div class="container terrace-table__wrap">
+                <table class="terrace-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Configuración</th>
+                            <th scope="col">Composición (mm)</th>
+                            <th scope="col">Atenuación (dB)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Vidrio simple</th>
+                            <td>6</td>
+                            <td>31</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Termopanel común</th>
+                            <td>6 / 12 / 6</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Termopanel con vidrios de distinto espesor</th>
+                            <td>8 / 12 / 10</td>
+                            <td>35</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Termopanel con laminado acústico</th>
+                            <td>3+3 / 12 / 6</td>
+                            <td>38</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="container pvc-two terrace-mt">
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-bulb'></i> Dos formas de lograrlo</h3>
+                    <ul class="pvc-checklist">
+                        <li><i class='bx bx-check'></i> <span>Usar <b>vidrios de distinto espesor</b>, idealmente con un 30% a 40% de diferencia entre ellos</span></li>
+                        <li><i class='bx bx-check'></i> <span>Incorporar un <b>vidrio laminado con lámina acústica</b>, que atenúa muy bien el ruido del tránsito</span></li>
+                    </ul>
+                </div>
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-error-circle'></i> Ojo</h3>
+                    <p>
+                        Un termopanel común aísla del ruido casi lo mismo que un vidrio simple. Si vives en una calle
+                        ruidosa, conviene un termopanel acústico, y que <b>todas las ventanas</b> del recinto tengan la
+                        misma aislación: el ruido entra por la más débil.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seguridad -->
+        <section class="section pvc-alt">
+            <h2 class="section__title">Vidrios de seguridad</h2>
+            <span class="section__subtitle">Cómo se comporta cada vidrio si se quiebra</span>
+
+            <div class="pvc-grid container">
+                <article class="pvc-card">
+                    <i class='bx bx-square pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Vidrio recocido</h3>
+                    <p>Es el vidrio común, el más usado en ventanas. Al romperse lo hace en trozos grandes y con filo, por eso no es un vidrio de seguridad.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-shield pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Vidrio templado</h3>
+                    <p>Tratado con calor, es unas <b>5 veces más resistente</b> que el común. Si se quiebra, se desarma en trozos pequeños, generalmente sin bordes cortantes.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-shield-quarter pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Vidrio laminado</h3>
+                    <p>Dos o más vidrios unidos por una lámina plástica (PVB). Si se rompe, los trozos quedan pegados a la lámina. Además filtra cerca del 99% de los rayos UV.</p>
+                </article>
+            </div>
+
+            <div class="container terrace-mt">
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-map-pin'></i> Se recomienda vidrio de seguridad al menos en</h3>
+                    <ul class="pvc-checklist">
+                        <li><i class='bx bx-check'></i> Ventanales de piso a cielo en viviendas</li>
+                        <li><i class='bx bx-check'></i> Ventanales y puertas vidriadas en espacios comunes de edificios</li>
+                        <li><i class='bx bx-check'></i> Ventanas de primer piso junto a patios y canchas en colegios</li>
+                        <li><i class='bx bx-check'></i> Puertas vidriadas y ventanales en locales de atención de público</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo elegir -->
+        <section class="section" id="dvh-elegir">
+            <h2 class="section__title">¿Qué termopanel me conviene?</h2>
+            <span class="section__subtitle">Elige según lo que más necesitas</span>
+
+            <ol class="pvc-steps container">
+                <li class="pvc-step">
+                    <span class="pvc-step__num"><i class='bx bx-sun'></i></span>
+                    <h3 class="pvc-step__title">Quiero más abrigo</h3>
+                    <p>Termopanel en todas las ventanas, idealmente con vidrio <b>Low-E</b> para reducir aún más la pérdida de calor.</p>
+                </li>
+                <li class="pvc-step">
+                    <span class="pvc-step__num"><i class='bx bx-cloud-light-rain'></i></span>
+                    <h3 class="pvc-step__title">Mi casa se calienta mucho</h3>
+                    <p>Termopanel con <b>control solar</b>, sobre todo en ventanas al norte y al poniente.</p>
+                </li>
+                <li class="pvc-step">
+                    <span class="pvc-step__num"><i class='bx bx-volume-mute'></i></span>
+                    <h3 class="pvc-step__title">Hay mucho ruido</h3>
+                    <p>Termopanel <b>acústico</b>, con vidrios de distinto espesor o laminado acústico.</p>
+                </li>
+                <li class="pvc-step">
+                    <span class="pvc-step__num"><i class='bx bx-child'></i></span>
+                    <h3 class="pvc-step__title">Hay niños o ventanales al piso</h3>
+                    <p>Termopanel con vidrio <b>templado o laminado</b> en los paños expuestos a golpes.</p>
+                </li>
+            </ol>
+            <p class="container pvc-note terrace-center">Estas funciones se pueden combinar en un mismo termopanel. Te asesoramos para encontrar el equilibrio entre beneficio y presupuesto.</p>
+        </section>
+
+        <!-- Normativa -->
+        <section class="section pvc-alt">
+            <h2 class="section__title">Normativa en Chile</h2>
+            <span class="section__subtitle">Lo que dicen la ordenanza y las normas técnicas</span>
+
+            <div class="pvc-grid container">
+                <article class="pvc-card">
+                    <i class='bx bx-building-house pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Reglamentación térmica</h3>
+                    <p>La Ordenanza General de Urbanismo y Construcciones (OGUC, art. 4.1.10) limita la superficie de ventanas según la zona térmica y el tipo de vidrio. Con termopanel se permite una mayor superficie vidriada que con vidrio simple.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-bar-chart-alt-2 pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Calificación energética</h3>
+                    <p>Las viviendas se califican de la A a la G según su eficiencia. Cambiar vidrios simples por termopanel es una de las formas de mejorar la calificación de una casa.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-volume-low pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Normas acústicas</h3>
+                    <p>La NCh 352 fija la aislación mínima frente al ruido exterior en dormitorios y estar. No es obligatoria en general, pero algunas ordenanzas municipales o proyectos la exigen.</p>
+                </article>
+                <article class="pvc-card">
+                    <i class='bx bx-shield-alt-2 pvc-card__icon'></i>
+                    <h3 class="pvc-card__title">Vidrios de seguridad</h3>
+                    <p>La serie NCh 135 define dónde usar vidrios de seguridad. Hoy es de uso voluntario, salvo que las especificaciones del proyecto lo pidan.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Aluminio o PVC -->
+        <section class="section">
+            <h2 class="section__title">Termopanel en aluminio o PVC</h2>
+            <span class="section__subtitle">Instalamos termopanel en ambos tipos de ventana</span>
+
+            <div class="container pvc-two">
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bx-window-alt'></i> Aluminio</h3>
+                    <p>Perfiles delgados y paños grandes. Con termopanel mejora mucho su aislación y se reduce la condensación en los vidrios.</p>
+                    <a href="ventanas-aluminio.html" class="products__link">Ver ventanas de aluminio <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="pvc-panel">
+                    <h3 class="pvc-panel__title"><i class='bx bxs-door-open'></i> PVC</h3>
+                    <p>El perfil aísla tanto como el vidrio, así que la ventana completa logra el mejor resultado térmico y acústico.</p>
+                    <a href="pvc.html" class="products__link">Ver ventanas de PVC <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section class="section pvc-alt">
+            <h2 class="section__title">Ventanas con termopanel que hemos instalado</h2>
+            <span class="section__subtitle">Algunos de nuestros trabajos en la región</span>
+
+            <div class="container terrace-gallery">
+                <img src="./obras/thumbs/detalle-04.jpg" alt="Bow window con termopanel" loading="lazy">
+                <img src="./obras/thumbs/casa-residencial-05.jpg" alt="Vivienda con ventanales de termopanel" loading="lazy">
+                <img src="./obras/thumbs/detalle-09.jpg" alt="Ventana proyectante con termopanel" loading="lazy">
+                <img src="./obras/thumbs/detalle-08.jpg" alt="Ventanal con termopanel visto desde el interior" loading="lazy">
+                <img src="./obras/thumbs/casa-residencial-07.jpg" alt="Vivienda con ventanas de termopanel" loading="lazy">
+                <img src="./obras/thumbs/colegio-heroes-01.jpg" alt="Recambio de ventanas en el Colegio Héroes de la Concepción" loading="lazy">
+            </div>
+            <div class="works__more">
+                <a href="index.html#works" class="button button--ghost">Ver todas las obras</a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="dvh-faq">
+            <h2 class="section__title">Preguntas frecuentes</h2>
+            <span class="section__subtitle">Lo que más nos preguntan sobre termopaneles</span>
+
+            <div class="container pvc-faq">
+                <details class="pvc-faq__item">
+                    <summary>¿Termopanel y DVH son lo mismo?</summary>
+                    <p>Sí. Termopanel es el nombre comercial y DVH (doble vidriado hermético) es el nombre técnico y normativo.</p>
+                </details>
+                <details class="pvc-faq__item">
+                    <summary>¿El termopanel elimina la condensación?</summary>
+                    <p>La reduce bastante, porque el vidrio interior queda más tibio. En ambientes muy húmedos sigue siendo importante ventilar a diario.</p>
+                </details>
+                <details class="pvc-faq__item">
+                    <summary>¿Un termopanel aísla del ruido?</summary>
+                    <p>Un termopanel común aísla casi lo mismo que un vidrio simple. Para bajar el ruido de verdad se necesita un termopanel acústico, con vidrios de distinto espesor o laminado acústico.</p>
+                </details>
+                <details class="pvc-faq__item">
+                    <summary>¿Qué significa 6/12/6?</summary>
+                    <p>Es la composición del termopanel en milímetros: vidrio de 6 mm, cámara de aire de 12 mm y otro vidrio de 6 mm.</p>
+                </details>
+                <details class="pvc-faq__item">
+                    <summary>¿Por qué se empaña por dentro de la cámara?</summary>
+                    <p>Si aparece humedad entre los dos vidrios, el sello perdió hermeticidad y el termopanel debe reemplazarse. Por eso es clave que esté bien fabricado y sellado.</p>
+                </details>
+                <details class="pvc-faq__item">
+                    <summary>¿Puedo poner termopanel en mis ventanas actuales?</summary>
+                    <p>Depende del perfil. Muchas ventanas antiguas no tienen espacio para el espesor de un termopanel. Lo revisamos en terreno y, si no es posible, te cotizamos la ventana completa.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section">
+            <div class="container pvc-cta">
+                <h2 class="pvc-cta__title">¿Quieres cambiarte a termopanel?</h2>
+                <p>Cuéntanos qué buscas (abrigo, menos ruido o menos calor) y te recomendamos la combinación adecuada.</p>
+                <div class="hero__buttons pvc-cta__buttons">
+                    <a href="https://wa.me/56968450823?text=Hola%2C%20quiero%20cotizar%20termopaneles" target="_blank" rel="noopener" class="button"><i class='bx bxl-whatsapp'></i> Cotizar por WhatsApp</a>
+                    <a href="index.html#contact" class="button button--ghost">Formulario de contacto</a>
+                </div>
+            </div>
+            <p class="container pvc-note terrace-center">Datos técnicos: Corporación de Desarrollo Tecnológico (CDT, CChC), "¿Cómo seleccionar adecuadamente un termopanel?", Ediciones Técnicas N°3, 2018.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <a href="index.html" class="footer__logo">
+                    <img src="./logo-texto.png" alt="Prowindows Logo" class="footer__logo-img">
+                </a>
+                <span class="footer__description">Especialistas en ventanas de<br>Aluminio, PVC y Termopaneles.</span>
+            </div>
+
+            <div class="footer__social">
+                <a href="#" class="footer__social-link"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/prowindowsdesign/" target="_blank" rel="noopener" aria-label="Instagram" class="footer__social-link"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/56968450823" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer__social-link"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; Prowindows Limitada. Todos los derechos reservados.</span>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1093,6 +1093,196 @@ img {
   margin-right: 0.25rem;
 }
 
+/* =============== PÁGINA CIERRE DE TERRAZAS =============== */
+.pvc-card .pvc-checklist {
+  margin-top: 1rem;
+}
+
+.pvc-card .pvc-note {
+  margin-top: 1rem;
+}
+
+/* =============== PÁGINA ALUMINIO =============== */
+.alu-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.alu-tile {
+  position: relative;
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.alu-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.alu-tile figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.5rem 0.75rem 0.6rem;
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.9));
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.alu-op {
+  display: block;
+  width: 96px;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+.op-frame { fill: none; stroke: #94a3b8; stroke-width: 3; }
+.op-sash { fill: rgba(147, 197, 253, 0.2); stroke: #cbd5e1; stroke-width: 2; }
+.op-sash--front { fill: rgba(147, 197, 253, 0.32); }
+.op-swing { fill: none; stroke: var(--first-color); stroke-width: 2; stroke-dasharray: 5 4; }
+.op-arrow { fill: none; stroke: var(--first-color); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.op-handle { fill: var(--first-color); }
+.op-shine { stroke: rgba(255, 255, 255, 0.55); stroke-width: 2.5; stroke-linecap: round; }
+
+/* =============== PÁGINA PVC: IMÁGENES =============== */
+.pvc-side { fill: var(--text-color); font: 600 14px var(--body-font); }
+
+.pvc-photos {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.pvc-photos img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid var(--glass-border);
+}
+
+/* =============== PÁGINA TERMOPANEL =============== */
+.dvh-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--glass-border);
+}
+
+.dvh-diagram {
+  margin: 0 0 1.25rem;
+}
+
+.dvh-diagram svg {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+  height: auto;
+}
+
+.dvh-shine { stroke: rgba(255, 255, 255, 0.45); stroke-width: 2; }
+.dvh-sheen { fill: none; stroke: rgba(255, 255, 255, 0.18); stroke-width: 2; }
+.dvh-leads line,
+.dvh-leads polyline { fill: none; stroke: #fff; stroke-width: 1.5; }
+.dvh-dots circle { fill: #fff; }
+.dvh-badge circle { fill: var(--first-color); stroke: #fff; stroke-width: 2; }
+.dvh-badge text { fill: #fff; font: 700 15px var(--body-font); text-anchor: middle; }
+.dvh-dim line { stroke: var(--text-color); stroke-width: 1.5; }
+.dvh-dimtext { fill: var(--text-color); font: 500 14px var(--body-font); }
+
+.dvh-parts {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.dvh-parts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.dvh-num {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--first-color);
+  color: #fff;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-bold);
+}
+
+.terrace-mt {
+  margin-top: 1.5rem;
+}
+
+.terrace-center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.terrace-table__wrap {
+  overflow-x: auto;
+  border-radius: 1.25rem;
+  border: 1px solid var(--glass-border);
+}
+
+.terrace-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  background: var(--container-color);
+  font-size: var(--small-font-size);
+}
+
+.terrace-table th,
+.terrace-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.terrace-table thead th {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-size: var(--normal-font-size);
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.terrace-table tbody th {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.terrace-table tbody tr:last-child th,
+.terrace-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.terrace-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.terrace-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid var(--glass-border);
+}
+
 @media screen and (min-width: 768px) {
   .pvc-split {
     grid-template-columns: 1.4fr 1fr;
