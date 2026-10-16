@@ -1,3 +1,7 @@
 node_modules/
 39691-2.pdf
 .claude/
+
+# Fotos originales (el sitio usa las versiones reducidas de obras/ y obras/thumbs/)
+obras/*/
+!obras/thumbs/
