@@ -1403,6 +1403,26 @@ img {
   border-bottom: none;
 }
 
+.terrace-card__img {
+  display: block;
+  width: calc(100% + 3.5rem);
+  max-width: none;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin: -2rem -1.75rem 1.25rem;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.terrace-sash { fill: rgba(255, 255, 255, 0.08); stroke: #cbd5e1; stroke-width: 4; }
+.terrace-sash--front { fill: rgba(255, 255, 255, 0.16); }
+
+.terrace-video {
+  max-width: 340px;
+  width: 100%;
+  justify-self: center;
+  align-self: start;
+}
+
 .terrace-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
