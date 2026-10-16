@@ -354,10 +354,106 @@ img {
   margin-bottom: 1rem;
 }
 
-/* =============== WORKS GALLERY =============== */
-.works__container {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+/* =============== WORKS GALLERY (CARRUSEL) =============== */
+.works__carousel {
+  position: relative;
+}
+
+.works__track {
+  --works-gap: 1.5rem;
+  display: flex;
+  gap: var(--works-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 1.5rem;
+  outline: none;
+}
+
+.works__track::-webkit-scrollbar {
+  display: none;
+}
+
+.works__track:focus-visible {
+  box-shadow: 0 0 0 2px var(--first-color);
+}
+
+.works__track .works__card {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+}
+
+.works__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-color);
+  backdrop-filter: blur(8px);
+  color: var(--title-color);
+  font-size: 2rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.works__arrow:hover {
+  background: var(--first-color);
+}
+
+.works__arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.works__arrow--prev { left: 0.75rem; }
+.works__arrow--next { right: 0.75rem; }
+
+.works__progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.works__bar {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--glass-border);
+  overflow: hidden;
+}
+
+.works__bar-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--first-color);
+  transition: width 0.3s;
+}
+
+.works__count {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 576px) {
+  .works__track .works__card {
+    flex-basis: calc((100% - var(--works-gap)) / 2);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .works__track .works__card {
+    flex-basis: calc((100% - 2 * var(--works-gap)) / 3);
+  }
 }
 
 .works__filters {
@@ -1319,7 +1415,7 @@ img {
     row-gap: 1rem;
   }
   
-  .products__container, .works__container {
+  .products__container {
     grid-template-columns: 1fr;
   }
 }

@@ -135,11 +135,16 @@
                 <button class="works__filter" data-filter="detalles">Puertas y Detalles</button>
             </div>
 
-            <!-- Las tarjetas se generan en script.js a partir de obras-data.js -->
-            <div class="works__container container grid" id="works-container"></div>
+            <!-- Carrusel: las tarjetas se generan en script.js a partir de obras-data.js -->
+            <div class="works__carousel container" id="works-carousel">
+                <button class="works__arrow works__arrow--prev" id="works-prev" aria-label="Obras anteriores"><i class='bx bx-chevron-left'></i></button>
+                <div class="works__track" id="works-container" tabindex="0" aria-label="Galería de obras"></div>
+                <button class="works__arrow works__arrow--next" id="works-next" aria-label="Obras siguientes"><i class='bx bx-chevron-right'></i></button>
+            </div>
 
-            <div class="works__more">
-                <button class="button button--ghost" id="works-more">Ver más obras</button>
+            <div class="works__progress container">
+                <div class="works__bar"><span class="works__bar-fill" id="works-bar"></span></div>
+                <span class="works__count" id="works-count"></span>
             </div>
         </section>
 

@@ -60,17 +60,20 @@ window.addEventListener('scroll', scrollActive)
 
 /* =============== WORKS GALLERY =============== */
 const worksContainer = document.getElementById('works-container'),
+      worksCarousel = document.getElementById('works-carousel'),
       worksFilters = document.querySelectorAll('.works__filter'),
-      worksMore = document.getElementById('works-more'),
-      WORKS_STEP = 12
+      worksPrev = document.getElementById('works-prev'),
+      worksNext = document.getElementById('works-next'),
+      worksBar = document.getElementById('works-bar'),
+      worksCount = document.getElementById('works-count'),
+      WORKS_AUTOPLAY_MS = 4000
 
 let worksFilter = 'all',
-    worksLimit = WORKS_STEP,
-    worksVisible = []
+    worksVisible = [],
+    worksTimer = null
 
 const renderWorks = () =>{
-    const filtered = OBRAS.filter(o => worksFilter === 'all' || o.cat === worksFilter)
-    worksVisible = filtered.slice(0, worksLimit)
+    worksVisible = OBRAS.filter(o => worksFilter === 'all' || o.cat === worksFilter)
 
     worksContainer.innerHTML = worksVisible.map((o, i) => `
         <div class="works__card" data-index="${i}">
@@ -81,7 +84,50 @@ const renderWorks = () =>{
             </div>
         </div>`).join('')
 
-    worksMore.style.display = filtered.length > worksLimit ? '' : 'none'
+    worksContainer.scrollTo({ left: 0, behavior: 'instant' })
+    updateWorksNav()
+}
+
+/* Ancho de un paso: una tarjeta más el espacio entre tarjetas */
+const worksStep = () =>{
+    const card = worksContainer.querySelector('.works__card')
+    if(!card) return worksContainer.clientWidth
+    return card.offsetWidth + parseFloat(getComputedStyle(worksContainer).columnGap || 0)
+}
+
+const updateWorksNav = () =>{
+    const maxScroll = worksContainer.scrollWidth - worksContainer.clientWidth,
+          pos = worksContainer.scrollLeft,
+          total = worksVisible.length,
+          perView = Math.max(1, Math.round(worksContainer.clientWidth / worksStep())),
+          first = Math.min(total, Math.round(pos / worksStep()) + 1),
+          last = Math.min(total, first + perView - 1)
+
+    worksPrev.disabled = pos <= 2
+    worksNext.disabled = pos >= maxScroll - 2
+    worksBar.style.width = total ? `${(last / total) * 100}%` : '0'
+    worksCount.textContent = total ? `${first === last ? first : `${first}–${last}`} de ${total}` : ''
+}
+
+const moveWorks = (dir) =>{
+    worksContainer.scrollBy({ left: dir * worksStep(), behavior: 'smooth' })
+}
+
+/* Autoplay: avanza solo, vuelve al inicio al llegar al final y se pausa al interactuar */
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+const stopWorksAutoplay = () =>{
+    clearInterval(worksTimer)
+    worksTimer = null
+}
+
+const startWorksAutoplay = () =>{
+    if(reduceMotion || worksTimer) return
+    worksTimer = setInterval(() =>{
+        const atEnd = worksContainer.scrollLeft >= worksContainer.scrollWidth - worksContainer.clientWidth - 2
+        if(atEnd) worksContainer.scrollTo({ left: 0, behavior: 'smooth' })
+        else moveWorks(1)
+    }, WORKS_AUTOPLAY_MS)
 }
 
 if(worksContainer){
@@ -89,16 +135,30 @@ if(worksContainer){
         worksFilters.forEach(f => f.classList.remove('active-filter'))
         b.classList.add('active-filter')
         worksFilter = b.dataset.filter
-        worksLimit = WORKS_STEP
+        stopWorksAutoplay()
         renderWorks()
+        startWorksAutoplay()
     }))
 
-    worksMore.addEventListener('click', () =>{
-        worksLimit += WORKS_STEP
-        renderWorks()
+    worksPrev.addEventListener('click', () => moveWorks(-1))
+    worksNext.addEventListener('click', () => moveWorks(1))
+
+    worksContainer.addEventListener('scroll', () => requestAnimationFrame(updateWorksNav), { passive: true })
+    window.addEventListener('resize', updateWorksNav)
+
+    worksContainer.addEventListener('keydown', (e) =>{
+        if(e.key === 'ArrowLeft'){ e.preventDefault(); moveWorks(-1) }
+        if(e.key === 'ArrowRight'){ e.preventDefault(); moveWorks(1) }
     })
 
+    worksCarousel.addEventListener('mouseenter', stopWorksAutoplay)
+    worksCarousel.addEventListener('mouseleave', startWorksAutoplay)
+    worksCarousel.addEventListener('focusin', stopWorksAutoplay)
+    worksCarousel.addEventListener('focusout', startWorksAutoplay)
+    worksContainer.addEventListener('touchstart', stopWorksAutoplay, { passive: true })
+
     renderWorks()
+    startWorksAutoplay()
 }
 
 /* =============== LIGHTBOX =============== */
@@ -116,6 +176,7 @@ const showLightbox = (index) =>{
     lightboxCaption.textContent = `${o.title} · ${o.subtitle}`
     lightbox.classList.add('show-lightbox')
     lightbox.setAttribute('aria-hidden', 'false')
+    stopWorksAutoplay()
 }
 
 const hideLightbox = () =>{
