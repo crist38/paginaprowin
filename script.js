@@ -206,3 +206,13 @@ if(lightbox && worksContainer){
         if(e.key === 'ArrowRight') showLightbox(lightboxIndex + 1)
     })
 }
+
+/* =============== VIDEOS =============== */
+/* Al reproducir un video se pausan los demás */
+const videoPlayers = document.querySelectorAll('.videos__player')
+
+videoPlayers.forEach(v => v.addEventListener('play', () =>{
+    videoPlayers.forEach(other =>{
+        if(other !== v) other.pause()
+    })
+}))
